@@ -1,2 +1,4 @@
-%% A4 page and requested finished-page margins, including header and footer.
-\geometry{a4paper,top=1in,bottom=0.8in,left=1.25in,right=1in,includehead,includefoot,headheight=2.3cm,headsep=0pt,footskip=0.42in}
+%% Keep matching visual separation between the body and the letterhead/footer.
+\newlength{\AdvocateHeaderFooterSep}
+\setlength{\AdvocateHeaderFooterSep}{0.5cm}
+\geometry{a4paper,top=1in,bottom=0.8in,left=1.25in,right=1in,includehead,includefoot,headheight=2.3cm,headsep=\AdvocateHeaderFooterSep,footskip=\AdvocateHeaderFooterSep}

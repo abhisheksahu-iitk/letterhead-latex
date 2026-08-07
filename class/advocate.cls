@@ -12,6 +12,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{geometry}
 \RequirePackage{setspace}
+\RequirePackage{enumitem}
 %% Header uses a fixed 2.2 cm vbox inside the requested 2.3 cm allocation.
 \RequirePackage[nocheck]{fancyhdr}
 \RequirePackage{lastpage}

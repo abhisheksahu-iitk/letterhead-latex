@@ -1,2 +1,5 @@
 %% Prefer the court-familiar Times New Roman; retain a high-quality TeX fallback.
 \IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{TeX Gyre Termes}}
+%% Times New Roman on this system lacks the Indian rupee glyph.
+\newfontfamily\RupeeFont{Georgia}
+\newcommand{\Rupee}{{\RupeeFont ₹}}
