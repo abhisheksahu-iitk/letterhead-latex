@@ -1,19 +1,19 @@
 %% Compact, full-width letterhead. Loaded by layout/page-style.tex.
 \newcommand{\AdvocateHeader}{%
   \vbox to 2.2cm{%
-    \hbox to \textwidth{%
-      \begin{minipage}[c][1.8cm][c]{0.18\textwidth}
-        \includegraphics[width=1.8cm,height=1.8cm,keepaspectratio]{assets/logo.png}%
-      \end{minipage}%
-      \hfill
-      \begin{minipage}[c][1.8cm][c]{0.79\textwidth}
-        \raggedright
-        {\fontsize{16}{18}\selectfont\bfseries \AdvocateName\par}
-        {\fontsize{11}{13}\selectfont \AdvocateDesignation\quad \AdvocateEnrollmentNo\par}
-        {\fontsize{10}{12}\selectfont \AdvocateAddress\par}
-        {\fontsize{10}{12}\selectfont Mobile: \AdvocatePhone\quad|\quad Email: \AdvocateEmail\ifx\AdvocateWebsite\@empty\else\quad|\quad \AdvocateWebsite\fi\par}
-      \end{minipage}%
+      \hbox to \textwidth{%
+        \begin{minipage}[c][1.8cm][c]{0.18\textwidth}
+          \includegraphics[width=1.8cm,height=1.8cm,keepaspectratio]{assets/logo.png}%
+        \end{minipage}%
+        \hfill
+        \begin{minipage}[c][1.8cm][c]{0.79\textwidth}
+          \raggedright
+          {\fontsize{16}{18}\selectfont\bfseries \AdvocateName\par}
+          {\fontsize{11}{13}\selectfont \AdvocateDesignation\quad|\quad \AdvocateEnrollmentNo\par}
+          {\fontsize{10}{12}\selectfont \AdvocateAddress\par}
+          {\fontsize{10}{12}\selectfont Mobile: \AdvocatePhone\quad|\quad Email: \AdvocateEmail\ifx\AdvocateWebsite\@empty\else\quad|\quad \AdvocateWebsite\fi\par}
+        \end{minipage}%
+      }%
+      \vfil\hrule height 1.2pt
     }%
-    \vfil\hrule height 1.2pt
-  }%
 }
