@@ -1,0 +1,9 @@
+%% Applies the shared header and footer to every page, including page one.
+\InputIfFileExists{layout/header.tex}{}{\ClassError{advocate}{Missing layout/header.tex}{}}
+\InputIfFileExists{layout/footer.tex}{}{\ClassError{advocate}{Missing layout/footer.tex}{}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\AdvocateHeader}
+\fancyfoot[C]{\AdvocateFooter}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
