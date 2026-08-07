@@ -1,7 +1,7 @@
 %% advocate.cls -- Reusable class for Indian Advocate letterhead documents.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{class/advocate}[2026/08/07 v1.0 Indian Advocate Letterhead]
-\LoadClass[12pt,a4paper]{article}
+\LoadClass[14pt,a4paper]{extarticle}
 
 %% XeLaTeX/LuaLaTeX provide reliable system-font use.
 \RequirePackage{iftex}
@@ -13,6 +13,7 @@
 \RequirePackage{geometry}
 \RequirePackage{setspace}
 \RequirePackage{enumitem}
+\RequirePackage{etoolbox}
 %% Header uses a fixed 2.2 cm vbox inside the requested 2.3 cm allocation.
 \RequirePackage[nocheck]{fancyhdr}
 \RequirePackage{lastpage}
@@ -42,4 +43,14 @@
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.5\baselineskip}
+\setlength{\emergencystretch}{2em}
+%% Quotations and indented material remain 14 pt but use single spacing.
+\setlist{before=\singlespacing}
+\AtBeginEnvironment{quote}{\singlespacing}
+\AtBeginEnvironment{quotation}{\singlespacing}
 \raggedbottom
+
+%% Call in the preamble for a local-language filing, e.g.
+%% \SetLocalUnicodeFont{Kohinoor Devanagari}
+\newcommand{\SetLocalUnicodeFont}[1]{\newfontfamily\AdvocateLocalUnicodeFont{#1}}
+\newcommand{\LocalLanguageText}[1]{{\AdvocateLocalUnicodeFont\fontsize{14}{21}\selectfont #1}}
