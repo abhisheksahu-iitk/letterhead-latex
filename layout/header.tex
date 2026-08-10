@@ -1,17 +1,18 @@
 %% Compact, full-width letterhead. Loaded by layout/page-style.tex.
 \newcommand{\AdvocateHeader}{%
-  \vbox to 2.2cm{%
+  \vbox to 2.3cm{%
       \hbox to \textwidth{%
         \begin{minipage}[c][2cm][c]{0.18\textwidth}
-          \includegraphics[width=1.9cm,height=1.9cm,keepaspectratio]{assets/logo.png}%
+          \includegraphics[width=2.4cm,height=2.4cm,keepaspectratio]{assets/logo.png}%
         \end{minipage}%
         \hfill
         \begin{minipage}[c][2cm][c]{0.79\textwidth}
           \raggedright
-          {\fontsize{18}{19}\selectfont\bfseries \AdvocateName\par}
+          {\fontsize{24}{25}\selectfont\bfseries \AdvocateName\par}
+          \vspace{0.05cm}
           {\fontsize{12}{12.5}\selectfont \AdvocateDesignation\quad|\quad \AdvocateEnrollmentNo\par}
-          {\fontsize{11}{11.5}\selectfont \AdvocateAddress\par}
-          {\fontsize{11}{11.5}\selectfont Mobile: \AdvocatePhone\quad|\quad Email: \AdvocateEmail\ifx\AdvocateWebsite\@empty\else\quad|\quad \AdvocateWebsite\fi\par}
+          {\fontsize{12}{12.5}\selectfont \AdvocateAddress\par}
+          {\fontsize{12}{12.5}\selectfont Mobile: \AdvocatePhone\quad|\quad Email: \AdvocateEmail\ifx\AdvocateWebsite\@empty\else\quad|\quad \AdvocateWebsite\fi\par}
         \end{minipage}%
       }%
       \vfil\hrule height 1.2pt
