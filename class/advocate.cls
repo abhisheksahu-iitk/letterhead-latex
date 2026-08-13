@@ -39,6 +39,19 @@
 \AtBeginDocument{\hypersetup{pdftitle={\AdvDocumentTitle}}}
 \InputIfFileExists{layout/page-style.tex}{}{\ClassError{advocate}{Missing layout/page-style.tex}{}}
 
+%% Drafting helpers. These keep routine correspondence structurally consistent
+%% while leaving the lawyer in control of the substantive text.
+\newcommand{\LetterDate}[1]{\noindent\hfill Date: #1\par}
+\newcommand{\Recipient}[3]{\noindent To,\\\relax#1\\\relax#2\\\relax#3\par}
+\newcommand{\Through}[1]{\noindent\textit{Through:} #1\par}
+\newcommand{\CaseDetails}[2]{\noindent\textbf{#1:} #2\par}
+\newcommand{\MatterCaption}[2]{\begin{center}\textbf{#1}\\\relax\textbf{#2}\end{center}}
+\newcommand{\DraftHeading}[1]{\par\noindent\textbf{#1}\par}
+\newcommand{\Prayer}[1]{\par\noindent\textbf{Prayer}\par #1\par}
+\newcommand{\SignatureBlock}{\par\noindent Yours faithfully,\par\vspace{1.5cm}\noindent\textbf{\AdvocateName}\\\AdvocateDesignation}
+\newenvironment{LegalFacts}{\begin{enumerate}[label=\arabic*., leftmargin=*]}{\end{enumerate}}
+\newenvironment{LegalGrounds}{\begin{enumerate}[label=\roman*., leftmargin=*]}{\end{enumerate}}
+
 %% Court-document defaults. Templates may use explicit paragraph breaks.
 \onehalfspacing
 \setlength{\parindent}{0pt}

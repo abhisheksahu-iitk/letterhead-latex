@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legal Document to Content"
+  short_description: "Turn source files into court-ready letters"
+  default_prompt: "Use $legal-document-to-content to turn this source document into a polished content.tex draft."
